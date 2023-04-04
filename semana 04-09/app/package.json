@@ -1,0 +1,18 @@
+{
+  "name": "negociacao",
+  "version": "1.0.0",
+  "description": "app de negociacao de venda em bolsa de valores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "Ricardo Werner",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro de Negociações</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Geneva;
+    }
+
+    body {
+      background-color: rgb(233, 230, 230);
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      width: 600px;
+      padding: 40px 0;
+      display: grid;
+      gap: 20px;
+      margin: auto;
+    }
+
+    input {
+      width: 100%;
+      margin: 0;
+      display: block;
+    }
+
+    label {
+      margin: 0;
+    }
+
+    button {
+      width: 100px;
+      padding: 12px 24px;
+      background-color: rgb(174, 123, 221);
+      border: none;
+      color: rgb(233, 230, 230);
+      font-size: 20px;
+      border-radius: 4px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <h1>Formulário de Cadastro de Negociações</h1>
+
+    <form>
+      <div>
+        <label> Data da negociação: </label>
+        <input type="date" name="data" id="data" />
+      </div>
+
+      <div>
+        <label> Quantidade de ações vendidas: </label>
+        <input
+          type="number"
+          name="quantidade"
+          id="quantidade"
+          min="01"
+          max="100"
+        />
+      </div>
+
+      <div>
+        <label> Valor da negociação: </label>
+        <input
+          type="number"
+          name="valor"
+          id="valor"
+          min="0"
+          max="1000000"
+          pattern="[0-9]+([.][0-9]+)?"
+          step=".1"
+        />
+      </div>
+
+      <button type="submit">Enviar</button>
+      <p></p>
+    </form>
+  </body>
+</html>

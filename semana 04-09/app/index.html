@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Negociação em Bolsa</title>
+</head>
+
+<body>
+    <main class="container">
+        <div class="principal">
+            <h1>Negociação em Bolsa de Valores</h1>
+        </div>
+
+        <div class="main-form">
+            <form id="form">
+            <label for="negociation-date"
+                >Data da Negociação:<input 
+                type="date" 
+                name="negociation-date" 
+                id="negociation-date"
+                required/>
+            </label>
+            <label for="stocks-quantity"
+                >Quantidade de Ações Vendidas:<input
+                type="number"
+                name="stocks-quantity"
+                id="stocks-quantity"
+                min="01"
+                pattern="[0-9]+([\,][0-9]+)?"
+                required/>
+            </label>
+            <label for="negociation-cost"
+                >Valor Unitário - Ação:<input
+                type="number"
+                name="negociation-cost"
+                id="negociation-cost"
+                min="0.0"
+                max="1000000.0"
+                pattern="[0-9]+([\,][0-9]+)?"
+                step=".1"
+                required/>
+            </label>
+            <label for="total-cost"
+                >Total da Transação:<input
+                type="number"
+                name="total-cost"
+                id="total-cost"
+                min="0.0"
+                pattern="[0-9]+([\,][0-9]+)?"
+                step=".1"/>
+            </label-->
+
+            <div id="buttons">
+            <button type="submit" id="send-btn">Enviar</button>
+            <button type="reset" id="reset-btn">Cancelar</button>
+            </div>
+            <div id="filtro">
+            <button id="filtra-btn">Filtrar</button>
+            <input id="filtrar" type="number" placeholder="Acima de:..">
+            </div>
+        </form>
+        </div>
+
+        
+
+    </main>
+
+    <div>
+        <table border="1" id="table">
+            <caption><h2>Histórico de Ações Vendidas</h2></caption>
+            <thead>
+                <tr>
+                    <th id="data" >Data de Negociação</th>
+                    <th id="quantidade">Qte - Ações Vendidas</th>
+                    <th id="Valor">Valor Unit - Ação</th>
+                    <th id="vlTotal">Total da Transação</th>
+                    <th id="opcao">Opção</th>
+                </tr>
+            </thead>
+            <tbody id="body-table"></tbody>
+        </table>
+    </div>
+
+    <script type="module" src="./js/main/negociacaoProgram.js"></script>
+</body>
+</html>
